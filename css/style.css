@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: darkslateblue;
+    color: white;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 1em 0;
+}
+h1 {
+    color: rgb(218, 124, 10);
+}
+
+p {
+    margin: 0;
+    padding: 0.3em 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    border-radius: 50px;
+    margin: .5em 1em;
+    transition: background 500ms ease;
+}
+.btn:hover {
+    background: rgb(218, 124, 10);
+    color: #333;
+}
+
+#showcase {
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+}
+
+#showcase .bgimg {
+    position: absolute;
+    background: url('/img/tampaskyline.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.6;
+}
+
+#showcase h1 {
+    padding-top: 140px;
+    padding-bottom: 40;
+    font-weight: bolder;
+}
+
+#showcase .content-wrap, #section-a .content-wrap {
+    padding: 0 1.5em;
+}
+
+#section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+}
+#section-b {
+    padding: 2em 1em 1em;
+}
+#section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#section-b li {
+    margin-bottom: 1em;
+    background: #eaeaea;
+    color: #333;
+    border-bottom: 5px solid rgb(218, 124, 10);
+}
+
+.card-content {
+    padding: 1.5em;
+}
+
+
+#section-c {
+    background: #eaeaea;
+    color: #333;
+    padding: 2em 1em 1em;
+}
+#section-c .service-card {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#section-c .service-card .main-list {
+    margin-bottom: 1em;
+    background: #eaeaea;
+    color: #333;
+    text-align: left;
+}
+
+#section-d .box {
+    padding: 2em;
+    color: #eaeaea;
+}
+
+#section-d .box:first-child {
+    background: rgb(218, 124, 10);
+}
+
+#section-d #email-paragraph a {
+    color: darkslateblue;
+    font-weight: bolder;
+    text-decoration: none;
+}
+#section-d #email-paragraph a:hover {
+    color: #fff;
+    transition: 300ms ease-in;
+}
+#section-d #phone-paragraph a {
+    color: darkslateblue;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#section-d #phone-paragraph a:hover {
+    color: #fff;
+    transition: 300ms ease-in;
+}    
+
+#footer {
+    padding: 2em;
+    color: #fff;
+    text-align: center;
+    background: #000;
+}
+#footer .portfolio a {
+    text-decoration: none;
+    color: #fff;
+}
+#footer .portfolio a:hover {
+    color: rgb(218, 124, 10);
+    transition: 300ms ease-in;
+}
+#fixedbutton {
+    position: fixed;
+    bottom: 15px;
+    right: 15px; 
+    color: rgb(218, 124, 10);
+}
+
+
+@media(min-width: 600px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 33em)) 1fr;
+    }
+
+    #section-a .content-text {
+        columns: 2;
+        column-gap: 2em;
+    }
+    #section-a .content-text p {
+        padding-top: 0;
+    }
+    .content-wrap {
+        grid-column: 2/4;
+    }
+    
+    #section-b ul {
+        grid-column: 2/4;
+        display: flex;
+        justify-content: space-around;
+    }  
+    #section-b li {
+        width: 31%;
+    }
+    #section-c .service-card {
+        grid-column: 2/4;
+        display: flex;
+        justify-content: space-around;
+    }
+    #section-c .service-card li {
+        width: 45%;
+    }
+    .box {
+        grid-column: span 2;
+    }
+    #footer div {
+        grid-column: span 2;
+    }
+}
